@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="486.0" prefWidth="800.0" style="-fx-background-color: #E8AFA7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.xemacscode.demo.MainController">
+   <children>
+      <Pane layoutX="26.0" layoutY="27.0" prefHeight="433.0" prefWidth="766.0" style="-fx-background-color: #D0E3FF;">
+         <children>
+            <Button fx:id="btninsert" layoutX="64.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="67.0" text="Insert" />
+            <Button fx:id="btnUpdate" layoutX="141.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="67.0" text="Update" />
+            <Button fx:id="btnDelete" layoutX="218.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="67.0" text="Delete" />
+            <VBox layoutX="14.0" layoutY="118.0" prefHeight="188.0" prefWidth="99.0" spacing="15.0">
+               <children>
+                  <Label text="ID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nama ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Jabatan">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="tahunMasuk">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="pages">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox focusTraversable="true" layoutX="106.0" layoutY="118.0" prefHeight="197.0" prefWidth="186.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="tfId" />
+                  <TextField fx:id="tfTittle" />
+                  <TextField fx:id="tfAuthor" layoutX="10.0" layoutY="10.0" />
+                  <TextField fx:id="tfYear" layoutX="10.0" layoutY="10.0" />
+                  <TextField fx:id="tfPages" layoutX="10.0" layoutY="10.0" />
+               </children>
+            </VBox>
+            <Label layoutX="44.0" layoutY="37.0" prefHeight="36.0" prefWidth="225.0" text="PT. JATI NEGARA " textAlignment="RIGHT">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tvKaryawans" layoutX="329.0" layoutY="43.0" onMouseClicked="#handleMouseAction" prefHeight="323.0" prefWidth="463.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="48.0" text="ID " />
+          <TableColumn fx:id="colTittle" prefWidth="165.0" text="Nama " />
+            <TableColumn fx:id="colAuthor" prefWidth="69.0" text="Jabatan" />
+            <TableColumn fx:id="colYear" prefWidth="88.0" text="tahunMasuk" />
+            <TableColumn fx:id="colPages" prefWidth="92.0" text="Pages" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
